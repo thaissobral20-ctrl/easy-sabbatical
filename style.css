@@ -453,3 +453,142 @@ main section {
         flex-direction: column;
     }
 }
+/* ========================================= */
+/* BLINDAGEM RESPONSIVA ABSOLUTA (MOBILE)    */
+/* ========================================= */
+@media screen and (max-width: 768px) {
+    /* Evita qualquer overflow horizontal e esmagamento */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Cabeçalho compacto e centralizado */
+    header {
+        padding: 12px 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav h1 {
+        font-size: 22px;
+    }
+
+    nav ul {
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    /* Espaçamento geral do conteúdo */
+    main {
+        padding: 20px 15px;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Força a Home a empilhar corretamente no telemóvel */
+    #home:not(.hidden) {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 25px !important;
+        min-height: auto !important;
+        width: 100% !important;
+    }
+
+    .intro-text {
+        width: 100% !important;
+        min-width: 0 !important;
+        text-align: center;
+    }
+
+    .intro-text h2 {
+        font-size: 26px !important;
+        line-height: 1.3;
+    }
+
+    .intro-text p {
+        font-size: 15px !important;
+    }
+
+    /* Garante que o globo se ajusta perfeitamente ao ecra do telemóvel */
+    #globe-container {
+        width: 100% !important;
+        min-height: 280px !important;
+        max-height: 320px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #globe-container canvas {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 280px !important;
+    }
+
+    /* Cartões de pacotes empilhados */
+    .packages-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px;
+    }
+
+    .package-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Dashboard ajustado para ecrãs pequenos */
+    .dashboard-container {
+        flex-direction: column !important;
+    }
+
+    .dashboard-menu {
+        width: 100% !important;
+        flex-direction: row !important;
+        overflow-x: auto;
+    }
+
+    .continent-btn {
+        flex: 1;
+        text-align: center;
+        padding: 12px 8px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .dashboard-content {
+        padding: 20px 15px !important;
+    }
+
+    .financial-summary {
+        flex-direction: column !important;
+        gap: 12px;
+    }
+
+    .dashboard-details {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    /* Modais adaptados para não ultrapassarem o ecrã do telemóvel */
+    .modal-content {
+        width: 95% !important;
+        padding: 20px !important;
+        max-height: 85vh !important;
+    }
+
+    #chat-window {
+        width: 90% !important;
+        right: 5% !important;
+        bottom: 10px !important;
+    }
+}
