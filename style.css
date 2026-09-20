@@ -364,3 +364,92 @@ main section {
     content: "✅";
     margin-right: 10px;
 }
+/* ========================================= */
+/* RESPONSIVIDADE PARA TELEMÓVEIS (MOBILE)   */
+/* ========================================= */
+@media screen and (max-width: 900px) {
+    /* 1. Header empilhado e proporcional */
+    header {
+        padding: 15px 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    /* 2. Main e Home empilhados (Texto em cima, Globo em baixo) */
+    main {
+        padding: 20px 15px;
+    }
+
+    #home:not(.hidden) {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+        gap: 30px !important;
+        min-height: auto !important;
+    }
+
+    .intro-text h2 {
+        font-size: 28px;
+    }
+
+    .intro-text p {
+        font-size: 15px;
+    }
+
+    #globe-container {
+        min-height: 300px !important;
+        width: 100% !important;
+    }
+
+    /* 3. Pacotes e Cards em coluna */
+    .packages-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* 4. Dashboard adaptado para mobile */
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .dashboard-menu {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .continent-btn {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .dashboard-details {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .financial-summary {
+        flex-direction: column;
+    }
+}
