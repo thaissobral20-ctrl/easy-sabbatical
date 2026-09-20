@@ -1,0 +1,366 @@
+/* ========================================= */
+/* 1. RESET E BASE (Fundo Bege Claro)        */
+/* ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff8eb;
+    color: #333333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ========================================= */
+/* 2. NAVEGAÇÃO (HEADER LARANJA PROPORCIONAL) */
+/* ========================================= */
+header {
+    background-color: #f57c00;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    color: #fff8eb;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff8eb;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4a3600;
+}
+
+/* ========================================= */
+/* 3. LAYOUT PRINCIPAL E ABAS SPA            */
+/* ========================================= */
+main {
+    padding: 40px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Isolamento estricto das abas */
+main section.hidden {
+    display: none !important;
+}
+
+main section {
+    display: block;
+}
+
+/* Home em Flexbox Lado a Lado (Texto à esquerda, Globo à direita) */
+#home:not(.hidden) {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 60px !important;
+    min-height: 70vh !important;
+    width: 100% !important;
+}
+
+.intro-text {
+    flex: 1.2 !important;
+    min-width: 320px;
+}
+
+.intro-text h2 {
+    font-size: 42px;
+    color: #4a3600;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.intro-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.main-btn {
+    background-color: #f57c00;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background-color: #ff9800;
+}
+
+/* ========================================= */
+/* 4. GLOBO 3D FOTORREALISTA                 */
+/* ========================================= */
+#globe-container {
+    flex: 1 !important;
+    min-height: 420px !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative;
+}
+
+#globe-container canvas {
+    max-width: 100%;
+    height: auto !important;
+}
+
+/* ========================================= */
+/* 5. PACOTES (CARDS)                        */
+/* ========================================= */
+.section-header {
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    color: #4a3600;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.packages-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.package-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    width: 300px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid #f57c00;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(245, 124, 0, 0.2);
+}
+
+.package-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.package-card h3 {
+    text-align: center;
+    padding: 20px;
+    color: #4a3600;
+    margin: 0;
+}
+
+/* ========================================= */
+/* 6. DASHBOARD FINANCEIRO E ROTAS           */
+/* ========================================= */
+.dashboard-container {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    border: 1px solid #e0d0b5;
+}
+
+.dashboard-menu {
+    background-color: #4a3600;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.continent-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.continent-btn:hover, .continent-btn.active {
+    background-color: #f57c00;
+}
+
+.dashboard-content {
+    padding: 40px;
+    flex: 1;
+}
+
+.financial-summary {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.summary-box {
+    background-color: #fff8eb;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-left: 5px solid #a88a68;
+    border: 1px solid #f57c00;
+}
+
+.summary-box.alert { border-left: 5px solid #f57c00; }
+.summary-box.luxury { border-left: 5px solid #4a3600; }
+
+.summary-box span { font-size: 12px; font-weight: bold; text-transform: uppercase; color: #555; }
+.summary-box strong { font-size: 22px; color: #4a3600; margin-top: 5px; }
+
+.dashboard-details {
+    display: flex;
+    gap: 40px;
+}
+
+.expenses-breakdown, .routes-section { flex: 1; }
+
+.dashboard-details h4 {
+    color: #f57c00;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.expenses-breakdown ul, .routes-section ul { list-style: none; }
+.routes-section ul { margin-left: 20px; list-style: disc; line-height: 1.8; color: #4a3600;}
+
+.expenses-breakdown li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #4a3600;
+}
+
+/* ========================================= */
+/* 7. JANELAS FLUTUANTES (MODAL E CHAT)      */
+/* ========================================= */
+#chat-window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 5000;
+    border: 2px solid #f57c00;
+}
+
+.chat-header { background-color: #f57c00; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+.chat-header button { background: none; border: none; color: white; font-weight: bold; cursor: pointer; }
+.chat-body { padding: 20px; height: 150px; background-color: #fff8eb; }
+.chat-footer { padding: 10px; display: flex; background: #fff; border-top: 1px solid #eee; }
+.chat-footer input { flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+.chat-footer button { padding: 8px 12px; border: none; background: #f57c00; color: white; border-radius: 4px; margin-left: 5px; cursor: pointer;}
+
+.modal-overlay {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-top: 10px solid #f57c00; 
+    box-shadow: 0 15px 35px rgba(245, 124, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-btn:hover { color: red; }
+
+#modal-features {
+    list-style: none;
+    margin: 15px 0 25px 0;
+}
+
+#modal-features li {
+    margin-bottom: 12px;
+    color: #4a3600;
+    display: flex;
+    align-items: center;
+}
+
+#modal-features li::before {
+    content: "✅";
+    margin-right: 10px;
+}

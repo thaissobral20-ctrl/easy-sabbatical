@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Sabbatical | Plan Your Dream Year</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= HEADER / NAVEGAÇÃO ================= -->
+    <header>
+        <nav>
+            <h1>Easy Sabbatical</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#dashboard">Dashboard & Routes</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= CONTEÚDO PRINCIPAL (ABAS) ================= -->
+    <main>
+        <!-- ABA 1: HOME -->
+        <section id="home">
+            <div class="intro-text">
+                <!-- Breve descrição institucional da empresa -->
+                <p style="font-size: 14px; font-weight: bold; text-transform: uppercase; color: #f57c00; letter-spacing: 1px; margin-bottom: 10px;">
+                    Your Global Gap Year Partner
+                </p>
+                <h2>Your World, Your Time. We Handle the Rest.</h2>
+                <!-- Texto explicativo sobre o que a empresa faz -->
+                <p>
+                    <strong>Easy Sabbatical</strong> is a specialized global planning platform designed for professionals, students, and adventurers seeking a life-changing gap year. We take the complexity out of long-term travel by managing custom itineraries, international visas, budget tracking, and comprehensive health insurance — allowing you to focus entirely on the experience.
+                </p>
+                <button class="main-btn" onclick="document.querySelector('nav ul li:nth-child(2) a').click();">Start Planning</button>
+            </div>
+            <div id="globe-container"></div>
+        </section>
+
+        <!-- ABA 2: PACOTES -->
+        <section id="packages" class="hidden">
+            <div class="section-header">
+                <h2>Choose Your Style</h2>
+                <p>Find the perfect balance for your gap year. Click on a card to see details.</p>
+            </div>
+            <div class="packages-container">
+                <div class="package-card" id="card-mochilao">
+                    <img src="imagens/mochileiro.jpeg" alt="Backpacking">
+                    <h3>Backpacking</h3>
+                </div>
+                <div class="package-card" id="card-conforto">
+                    <img src="imagens/confort.jpeg" alt="Comfortable">
+                    <h3>Comfortable</h3>
+                </div>
+                <div class="package-card" id="card-luxo">
+                    <img src="imagens/luxo.jpeg" alt="Luxury">
+                    <h3>Luxury</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 3: DASHBOARD -->
+        <section id="dashboard" class="hidden">
+            <div class="section-header">
+                <h2>Routes & Budgets Dashboard</h2>
+                <p>Select a continent to see detailed budget estimates and expense analysis.</p>
+            </div>
+            <div class="dashboard-container">
+                <div class="dashboard-menu">
+                    <button class="continent-btn active" data-continent="europe">Europe</button>
+                    <button class="continent-btn" data-continent="asia">Southeast Asia</button>
+                    <button class="continent-btn" data-continent="southamerica">South America</button>
+                </div>
+                <div class="dashboard-content">
+                    <h3 id="dash-title">Europe Explorer</h3>
+                    <h4>Estimated Monthly Budget</h4>
+                    <div class="financial-summary">
+                        <div class="summary-box">
+                            <span>Backpacking</span>
+                            <strong id="dash-budget-back">$2,500</strong>
+                        </div>
+                        <div class="summary-box alert">
+                            <span>Comfortable</span>
+                            <strong id="dash-budget-comf">$4,500</strong>
+                        </div>
+                        <div class="summary-box luxury">
+                            <span>Luxury</span>
+                            <strong id="dash-budget-lux">$8,000+</strong>
+                        </div>
+                    </div>
+                    <div class="dashboard-details">
+                        <div class="expenses-breakdown">
+                            <h4>Expense Breakdown</h4>
+                            <ul id="dash-categories"></ul>
+                        </div>
+                        <div class="routes-section">
+                            <h4>Suggested Routes</h4>
+                            <ul id="dash-route"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- ABA 4: SUPORTE -->
+        <section id="support" class="hidden">
+            <div class="section-header">
+                <h2>Consultant Support</h2>
+                <p>Your plans changed in the middle of Asia? No problem. Talk to your dedicated consultant right now or send us a message, we are here 24/7.</p>
+                <!-- Botão com margem superior ajustada -->
+                <button id="btn-chat" class="main-btn" style="margin-top: 25px; margin-bottom: 30px;">Open Live Chat</button>
+            </div>
+            
+            <div style="background: #fff; padding: 30px; border-radius: 10px; border: 1px solid #e0d0b5; max-width: 600px; margin: 0 auto;">
+                <h3 style="color: #4a3600; margin-bottom: 15px;">Send a Priority Message</h3>
+                <form id="support-form" onsubmit="event.preventDefault(); alert('Message sent successfully! Your dedicated consultant will reply via email within 2 hours.');">
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 5px; color: #4a3600;">Your Name</label>
+                        <input type="text" required placeholder="e.g. John Doe" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 5px; color: #4a3600;">Your Email</label>
+                        <input type="email" required placeholder="john@example.com" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 5px; color: #4a3600;">Message / Emergency details</label>
+                        <textarea required rows="4" placeholder="How can we help your trip right now?" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+                    </div>
+                    <button type="submit" class="main-btn" style="width: 100%;">Send Priority Message</button>
+                </form>
+            </div>
+        </section>
+
+    <!-- ================= JANELAS FLUTUANTES ================= -->
+    <div id="chat-window" class="hidden">
+        <div class="chat-header">
+            <h4>Support Chat</h4>
+            <button id="btn-close-chat">X</button>
+        </div>
+        <div class="chat-body">
+            <p>Hello! How can we help plan your gap year today?</p>
+        </div>
+        <div class="chat-footer">
+            <input type="text" placeholder="Type your message...">
+            <button>Send</button>
+        </div>
+    </div>
+
+    <div id="package-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">X</button>
+            <h2 id="modal-title">Pacote</h2>
+            <h3 id="modal-price" style="color: #4a3600; font-size: 22px; margin-bottom: 15px;"></h3>
+            <p id="modal-description">Descrição...</p>
+            <h4>What is included in this plan:</h4>
+            <ul id="modal-features"></ul>
+            <button class="modal-action-btn main-btn" style="width: 100%; margin-top: 20px;">Talk to a Consultant</button>
+        </div>
+    </div>
+
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
