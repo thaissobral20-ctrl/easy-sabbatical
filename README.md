@@ -8,10 +8,9 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat&logo=three.js&logoColor=white)
 
-## Live Demo
+## 🌐 Live Demo
 
-You can view the live version hosted via GitHub Pages:  
-👉 [https://thaissobral20-ctrl.github.io/easy-sabbatical/](https://thaissobral20-ctrl.github.io/easy-sabbatical/)
+You can view the live version hosted via GitHub Pages: [https://thaissobral20-ctrl.github.io/easy-sabbatical/](https://thaissobral20-ctrl.github.io/easy-sabbatical/)
 ---
 
 ## About the Project & Pioneering Vision
